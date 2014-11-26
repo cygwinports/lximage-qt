@@ -1,7 +1,7 @@
-inherit qt4-cmake
+inherit qt5 cmake
 
 NAME="lximage-qt"
-VERSION=0.2.0
+VERSION=0.3.0
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="LXQt image viewer"
@@ -10,5 +10,6 @@ product of the merge between the LXDE-Qt and the Razor-qt projects: A
 lightweight, modular, blazing-fast and user-friendly desktop environment."
 HOMEPAGE="http://lxqt.org/"
 SRC_URI="http://lxqt.org/downloads/${NAME}/${VERSION}/${NAME}-${VERSION}.tar.xz"
-SRC_DIR=.
 PATCH_URI="0.2.0-cxxflags.patch"
+
+export USE_QT5=1
